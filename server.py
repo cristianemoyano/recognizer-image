@@ -2,7 +2,7 @@ import os
 import sys
 import uuid
 
-from flask import Flask, request, abort, flash, jsonify
+from flask import Flask, request, jsonify
 from openalpr import Alpr
 
 app = Flask(__name__)
@@ -30,5 +30,5 @@ def get_plate_number():
 
 
 if __name__ == '__main__':
-    	app.secret_key = 'super secret key'
-	app.run(debug=True, host='0.0.0.0')
+    app.secret_key = 'super secret key'
+    app.run()
